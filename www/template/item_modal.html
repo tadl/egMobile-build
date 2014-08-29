@@ -1,0 +1,46 @@
+<div class="modal">
+    <ion-header-bar class="bar-solid">
+        <h1 class="title">Item Details</h1>
+        <div class="button button-clear" ng-click="closeModal()">
+            <span class="icon ion-close"></span>
+        </div>
+    </ion-header-bar>
+    <ion-content padding="true">
+        <div class="item item-text-wrap">
+            <div class="row">
+                <span class="detail_title">{{details.title}}</span>
+            </div>
+            <div class="row">
+                <div class="col col-25">
+                    <img ng-src="{{details.image}}" err-src="/img/clocktower100.png" class="cover_item_details" />
+                </div>
+                <div class="col col-75">
+                    <span class="detail_key">Author(s) / Group: </span>
+                    <span class="detail_value">{{details.author}}</span>
+                    <div ng-show="details.summary != null">
+                        <span class="detail_key">Summary: </span>
+                        <span class="detail_value">{{details.summary}}</span>
+                    </div>
+                    <div ng-show="details.contents != null">
+                        <span class="detail_key">Contents: </span>
+                        <span class="detail_value">{{details.contents}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item" ng-show="copies_on_shelf.length">
+            <span class="detail_title">Copies on the shelf at</span>
+            <div ng-repeat="location in locations">
+                <span class="detail_key">{{location}}</span>
+                <div ng-repeat="copy in copies_on_shelf">
+                  <div class="row responsive-sm" ng-if="copy.location == location">
+                    {{copy.shelving_location}} &raquo; {{copy.call_number}}
+                  </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</div>
+
+
+

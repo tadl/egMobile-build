@@ -1,0 +1,115 @@
+/* Empty. Add your own CSS if you like */
+
+.cover_search_results {
+    width: 100%;
+    max-width: 200px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.big_loading {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.padbot {
+    padding-bottom: 5px;
+}
+.padtop {
+    padding-top: 5px;
+}
+.details-button {
+    float: right;
+}
+
+.cover_item_details {
+    width: 100%;
+}
+
+.node_image {
+    float: left;
+    padding-right: 10px;
+    max-width: 50%;
+}
+
+.location_image {
+    max-width: 300px;
+    width: 100%;
+}
+h2.location_name {
+    text-align: center;
+    font-size: 1.2em;
+}
+h2.title {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.detail_key {
+    font-weight: bold;
+}
+
+span.detail_value {
+    text-align: right;
+}
+
+.detail_title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a.menu_link {
+    text-decoration: none;
+}
+
+div.menu_div:hover {
+    background-color: #f5f5f5;
+}
+
+.barcode_img {
+    width: 80%;
+    max-width: 450px;
+    display: block;
+    margin: 10px auto;
+}
+.barcode-wrap {
+    padding:20px;
+}
+
+.news_image {
+    width: 100%;
+}
+
+.hours-display {
+}
+.hours-row-odd {
+    background-color: #fff;
+}
+.hours-row-even {
+    background-color: #eee;
+}
+.hours-row {
+    padding:3px 10px;
+}
+.hours-row span.detail_value {
+    float: right;
+}
+
+.overdue {
+    color: #ff0000;
+}
+
+.item {
+    white-space: normal;
+}
+
+.button-clear.icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+.card-icon {
+    margin-right: 20px;
+}
+.center {
+    text-align: center;
+}

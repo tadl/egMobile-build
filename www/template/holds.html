@@ -1,0 +1,22 @@
+<div class="list">
+    <h1 class="item item-divider">{{$root.user_basic.holds}} Item(s) on Hold</h1>
+</div>	
+<div class="card" ng-repeat="hold in holds">
+    <div class="item item-avatar">
+        <img ng-src="https://catalog.tadl.org/opac/extras/ac/jacket/large/r/{{hold.record_id}}" err-src="/img/clocktower100.png" />
+        <h2>{{hold.title}}</h2>
+        <p>{{hold.author}}</p>
+    </div>
+    <div class="item">
+        <span class="detail_key">Status: </span>
+        <span class="detail_value" ng-show="hold.hold_status != ''">{{hold.queue_status}}</span>
+        <span class="detail_value" ng-show="hold.hold_status == 'Suspended'">{{hold.hold_status}}</span>
+    </div>
+    <div class="item">
+        <button class="button button-positive" ng-click="item_details('{{hold.record_id}}')">Details</button>
+        <button class="button button-balanced" ng-click="change_hold('{{hold.hold_id}}','activate')" ng-show="hold.hold_status == 'Suspended'">Activate</button>
+        <button class="button button-dark" ng-click="change_hold('{{hold.hold_id}}','suspend')" ng-show="hold.hold_status != 'Suspended' && hold.queue_status.indexOf('Available')">Suspend</button>
+        <button class="button button-assertive" ng-click="confirm_{{hold.hold_id}} = 1" ng-hide="confirm_{{hold.hold_id}} == 1">Cancel</button>
+        <button class="button button-assertive" ng-click="change_hold('{{hold.hold_id}}','cancel')" ng-show="confirm_{{hold.hold_id}} == 1">Confirm</button>
+    </div>
+</div>
