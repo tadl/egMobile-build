@@ -113,3 +113,8 @@ div.menu_div:hover {
 .center {
     text-align: center;
 }
+
+.make_fast {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
