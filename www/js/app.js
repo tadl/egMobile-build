@@ -193,6 +193,7 @@ app.controller('SearchCtrl', function($scope, $rootScope, $http, $location, $sta
   if($scope.query != null || $scope.current_search != $scope.query ){
     $scope.search();
   }
+
 });
 
 //Account Controller
