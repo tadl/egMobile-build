@@ -53,43 +53,43 @@ var app = angular.module('egmobile', ['ionic','ngFitText'])
 
   .state('main.search', {
     url: 'search?query&format&sort&availability&loc&qtype',
-    templateUrl: '/template/search.html',
+    templateUrl: 'template/search.html',
     controller: 'SearchCtrl',
   })
 
   .state('main.holds', {
     url: 'holds',
-    templateUrl: "/template/holds.html",
+    templateUrl: "template/holds.html",
     controller: 'HoldsCtrl',
   })
 
   .state('main.checkouts', {
     url: 'checkouts',
-    templateUrl: '/template/checkouts.html',
+    templateUrl: 'template/checkouts.html',
     controller: 'CheckoutCtrl',
   })
 
   .state('main.card',{
     url: 'card',
-    templateUrl: '/template/card.html',
+    templateUrl: 'template/card.html',
     controller: 'CardCtrl',
   })
 
   .state('main.locations',{
     url: 'locations',
-    templateUrl: '/template/locations.html',
+    templateUrl: 'template/locations.html',
     controller: 'LocationCtrl',
   })
 
   .state('main.events',{
     url: 'events',
-    templateUrl: '/template/events.html',
+    templateUrl: 'template/events.html',
     controller: 'EventsCtrl',
   })
 
   .state('main.news',{
     url: 'news',
-    templateUrl: '/template/news.html',
+    templateUrl: 'template/news.html',
     controller: 'NewsCtrl',
   })
 
