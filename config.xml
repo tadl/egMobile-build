@@ -1,18 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.egmobilebuild577126" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-  <name>egMobile-build</name>
-  <description>
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets" 
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "org.tadl.mobile.ionic" 
+    versionCode = "10"
+    version     = "0.9.0"  >
+    
+    <name>egMobile-build</name>
+
+    <description>
         An Ionic Framework and Cordova project.
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
-    </author>
-  <content src="www/index.html"/>
-  <access origin="*"/>
-  <preference name="webviewbounce" value="false"/>
-  <preference name="UIWebViewBounce" value="false"/>
-  <preference name="DisallowOverscroll" value="true"/>
-  <preference name="BackupWebStorage" value="none"/>
 
-  <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
+    <author email="hi@ionicframework" href="http://ionicframework.com/">
+        Ionic Framework Team
+    </author>
+
+    <content src="www/index.html"/>
+
+    <access origin="*"/>
+
+    <preference name="webviewbounce" value="false"/>
+    <preference name="UIWebViewBounce" value="false"/>
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="BackupWebStorage" value="none"/>
+
+    <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
+
 </widget>
