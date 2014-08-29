@@ -59,13 +59,13 @@
 
     <div class="card" ng-repeat="result in results">
         <div class="item item-avatar">
-            <img ng-src="{{result.format_icon}}" err-src="/img/clocktower100.png" />
+            <img ng-src="{{result.format_icon}}" err-src="img/clocktower100.png" />
             <h2>{{result.title}}</h2>
             <p>{{result.author}}</p>
         </div>
         <div class="item item-text-wrap row" style="min-height: 150px;">
             <div class="col col-33">
-                <img class="cover_search_results" ng-src="https://catalog.tadl.org/opac/extras/ac/jacket/large/r/{{result.record_id}}" err-src="/img/clocktower100.png" />
+                <img class="cover_search_results" ng-src="https://catalog.tadl.org/opac/extras/ac/jacket/large/r/{{result.record_id}}" err-src="img/clocktower100.png" />
             </div>
             <div class="col col-66">
                 <h2 ng-show="result.abstract != null">Abstract</h2>
