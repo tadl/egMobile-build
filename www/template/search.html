@@ -56,8 +56,9 @@
             </select>
         </label>
     </div>
-
-    <div class="card make_fast" ng-repeat="result in results">
+</div>
+<div class="list">
+    <div class="card make_fast" collection-repeat="result in results" collection-item-width="'100%'" collection-item-height="350">
         <div class="item item-avatar">
             <img ng-src="{{result.format_icon}}" err-src="img/clocktower100.png" />
             <h2>{{result.title}}</h2>
@@ -84,6 +85,5 @@
             <button ng-hide="logged_in" class="button button-positive" menu-toggle="right">Log in to place hold</button>
         </div>
     </div>
-
     <ion-infinite-scroll ng-if="more_results == 'true'" on-infinite="search('true')" distance="20%"></ion-infinite-scroll>
 </div>
