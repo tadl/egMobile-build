@@ -1,7 +1,7 @@
 /* Empty. Add your own CSS if you like */
 
 .cover_search_results {
-    max-height: 140px;
+    width: 100%;
     max-width: 200px;
     float: left;
     margin: 0 10px 0 0;
@@ -112,9 +112,4 @@ div.menu_div:hover {
 }
 .center {
     text-align: center;
-}
-
-.my-item {
-  left: 0;
-  right: 0;
 }
