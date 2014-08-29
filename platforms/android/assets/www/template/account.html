@@ -1,0 +1,37 @@
+<div id="login-box" class="list" ng-hide="$root.logged_in == true">
+    <label class="item item-input">
+        <span class="input-label">Username</span>
+        <input type="text" ng-model="username">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" ng-model="password" ng-enter="login()">
+    </label>
+    <div style="margin:15px;">
+        <button class="item button button-stable" ng-click="login()">Login</button>
+        <button class="item button button-stable">Reset Password</button>
+    </div>
+</div>
+
+<div id="login-box" class="list" ng-show="$root.logged_in == true">
+    <div class='list'>
+        <div class="item item-divider">
+            {{$root.user_basic.full_name}}
+        </div>
+        <a ui-sref="main.checkouts" class="item" menu-close>
+            Checkouts <span class="badge badge-positive">{{$root.user_basic.checkouts}}</span>
+        </a>
+        <a ui-sref="main.holds" class="item" menu-close>
+            Holds <span class="badge badge-positive">{{$root.user_basic.holds}}</span>
+        </a>
+        <a ui-sref="main.card" class="item item-icon-right" menu-close>
+            <i class="icon ion-card card-icon"></i>Library Card
+        </a>
+        <div class="item" ng-hide="$root.user_basic.fine == '0.00'">
+            Fines <span ng-class="{false: 'badge-positive', true: 'badge-assertive'}[$root.user_basic.fine >= '5.00']" class="badge">{{$root.user_basic.fine | currency}}</span>
+        </div>
+    </div>
+    <div style="margin:15px;">
+        <button class="button button-stable" ng-click="logout()">Sign Out</button>
+    </div>
+</div>

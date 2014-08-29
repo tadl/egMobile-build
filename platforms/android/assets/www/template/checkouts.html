@@ -1,0 +1,31 @@
+<div class="list">
+    <h1 class="item item-divider">{{$root.user_basic.checkouts}} Item(s) Checked Out</h1>
+</div>	
+<div class="card" ng-repeat="checkout in checkouts">
+    <div class="item item-avatar">
+        <img ng-src="https://catalog.tadl.org/opac/extras/ac/jacket/large/r/{{checkout.record_id}}" err-src="/img/clocktower100.png" />
+        <h2>{{checkout.title}}</h2>
+        <p>{{checkout.author}}</p>
+    </div>
+    <div class="item">
+        <div>
+            <span class="detail_key" ng-class="{true: 'overdue'}[checkout.overdue]">Due Date: </span>
+            <span class="detail_value" ng-class="{true: 'overdue'}[checkout.overdue]">{{checkout.due_date}}</span>
+            <span class="detail_value overdue" ng-show="checkout.overdue"> (OVERDUE)</span>
+        </div>
+        <div ng-show="!checkout.renew_urgent && checkout.overdue">
+            <span class="detail_key overdue">Please return this item as soon as possible.</span>
+        </div>
+        <div ng-show="checkout.renew_attempts <= 0">
+            <span class="detail_value overdue">No renewals remaining.</span>
+        </div>
+        <div ng-show="checkout.renew_attempts > 0">
+            <span class="detail_key">Renewal Attempts Remaining: </span>
+            <span class="detail_value">{{checkout.renew_attempts}}</span>
+        </div>
+    </div>
+    <div class="item">
+        <button class="button button-positive" ng-click="item_details('{{checkout.record_id}}')">Details</button>
+        <button class="button button-balanced" ng-show="checkout.renew_attempts > 0" ng-click="renew('{{checkout.checkout_id}}')">Renew</button>
+    </div>
+</div>
