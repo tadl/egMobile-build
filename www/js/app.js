@@ -500,7 +500,7 @@ app.factory('node_details', function($http, $ionicModal, $rootScope) {
     return {
         show: function(nid, $scope) {
             $scope = $scope || $rootScope.$new();
-            $ionicModal.fromTemplateUrl('/template/node_modal.html', function(modal) {
+            $ionicModal.fromTemplateUrl('template/node_modal.html', function(modal) {
                 $scope.modal = modal;
             },
             {
@@ -536,7 +536,7 @@ app.factory('item_details', function($http, $ionicModal, $rootScope) {
     return {
         show: function(record_id, $scope) {
             $scope = $scope || $rootScope.$new();
-            $ionicModal.fromTemplateUrl('/template/item_modal.html', function(modal) {
+            $ionicModal.fromTemplateUrl('template/item_modal.html', function(modal) {
                 $scope.modal = modal;
             },
             {
