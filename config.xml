@@ -3,7 +3,7 @@
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "org.tadl.mobile.ionic" 
     versionCode = "10"
-    version     = "0.9.0"  >
+    version     = "0.9.0" >
     
     <name>egMobile-build</name>
 
@@ -15,14 +15,14 @@
         Ionic Framework Team
     </author>
 
-    <content src="www/index.html"/>
+    <content src="www/index.html" />
 
-    <access origin="*"/>
+    <access origin="*" />
 
-    <preference name="webviewbounce" value="false"/>
-    <preference name="UIWebViewBounce" value="false"/>
-    <preference name="DisallowOverscroll" value="true"/>
-    <preference name="BackupWebStorage" value="none"/>
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="none" />
 
     <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
 
